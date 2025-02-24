@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Greeting</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f7c6d7; /* Soft pink background */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Full height of the screen */
+      overflow: hidden; /* Prevent scrolling */
+      position: relative;
+    }
+
+    .container {
+      text-align: center;
+      background-color: #ffffff; /* White background for the card */
+      color: #333;
+      padding: 40px 30px;
+      border-radius: 20px;
+      width: 350px; /* Adjust width to look like a card */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .container h1 {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+
+    .message-container {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 40px 30px;
+      border-radius: 20px;
+      width: 350px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .message-container.show {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .message-container h2 {
+      font-size: 24px;
+      color: #ff6347;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .message-container p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 15px;
+      font-weight: 300;
+    }
+
+    .flower {
+      font-size: 50px;
+      margin-top: 20px;
+    }
+
+    .go-back {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #ff6347;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .go-back:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 onclick="showMessage()">Happy Birthday!</h1>
+    <p>Click above to see your special message.</p>
+  </div>
+
+  <div class="message-container" id="message">
+    <h2>Your Special Birthday Message</h2>
+    <p>Maligayang Kaarawan sa aking mahal hahaha wow diba, mahal ba naman agad mababasa mo HAHAHA pero ito na talaga. I am happy to meet you, i didn't expect that we were going from friends to something else, I'm glad that you appreciate my feelings from you and now we're getting to know more about us. So far so good pa naman hahaha, and also i know naman na may feelings kana rin sakin so ayon thanks for your appreciation. love lots po, HAPPY BIRTHDAY Celine 🫶</p>
+    <p>With love, Joseph</p>
+
+    <div class="flower">🌸</div>
+
+    <a href="javascript:void(0)" class="go-back" onclick="goBack()">Go Back to Greeting</a>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.querySelector('.container').style.display = 'none'; // Hide the greeting card
+      document.getElementById('message').classList.add('show'); // Show the message
+    }
+
+    function goBack() {
+      document.querySelector('.container').style.display = 'block'; // Show greeting card
+      document.getElementById('message').classList.remove('show'); // Hide the message
+    }
+  </script>
+
+
+</body></html>
