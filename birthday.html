@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Birthday Greeting</title>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Birthday Greeting</title> 
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -89,25 +89,27 @@
       text-decoration: underline;
     }
 
-  </style>
-</head>
-<body>
+  </style> 
+ </head> 
+ <body> 
+  <div class="container"> 
+   <h1 onclick="showMessage()">Happy Birthday!</h1> 
+   <p>Click above to see your special message.</p> 
+  </div> 
+  <div class="message-container" id="message"> 
+   <h2>Your Special Birthday Message</h2> 
+   <p>Maligayang kaarawan sa aking mahal! Hahaha, wow, "mahal" agad, diba? Pero ito na talaga.
 
-  <div class="container">
-    <h1 onclick="showMessage()">Happy Birthday!</h1>
-    <p>Click above to see your special message.</p>
-  </div>
+I am happy to have met you. I didn’t expect that we would go from being friends to something more. I’m glad that you appreciate my feelings for you, and now we’re getting to know each other even more. So far, so good naman—hahaha!
 
-  <div class="message-container" id="message">
-    <h2>Your Special Birthday Message</h2>
-    <p>Maligayang Kaarawan sa aking mahal hahaha wow diba, mahal ba naman agad mababasa mo HAHAHA pero ito na talaga. I am happy to meet you, i didn't expect that we were going from friends to something else, I'm glad that you appreciate my feelings from you and now we're getting to know more about us. So far so good pa naman hahaha, and also i know naman na may feelings kana rin sakin so ayon thanks for your appreciation. love lots po, HAPPY BIRTHDAY Celine 🫶</p>
-    <p>With love, Joseph</p>
+Also, I know you have feelings for me too (aminin mo haha), so thank you for appreciating me. Love lots, po!
 
-    <div class="flower">🌸</div>
-
-    <a href="javascript:void(0)" class="go-back" onclick="goBack()">Go Back to Greeting</a>
-  </div>
-
+HAPPY BIRTHDAY, CELINE! 🫶</p>
+   <p>With love, Joseph</p> 
+   <div class="flower">
+    🌸
+   </div> <a href="javascript:void(0)" class="go-back" onclick="goBack()">Go Back to Greeting</a> 
+  </div> 
   <script>
     function showMessage() {
       document.querySelector('.container').style.display = 'none'; // Hide the greeting card
@@ -118,7 +120,6 @@
       document.querySelector('.container').style.display = 'block'; // Show greeting card
       document.getElementById('message').classList.remove('show'); // Hide the message
     }
-  </script>
-
-
+  </script> 
+ 
 </body></html>
